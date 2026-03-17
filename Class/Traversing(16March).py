@@ -37,3 +37,6 @@ driver.get("https://the-internet.herokuapp.com/tables")
 due = driver.find_element(By.XPATH,"(//td[text()='Tim'])[1]//following-sibling::td[2]")
 print("Due amount of Tim is:",due.text)
 driver.close()
+
+
+
