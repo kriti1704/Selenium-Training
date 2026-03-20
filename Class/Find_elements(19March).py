@@ -16,7 +16,7 @@ for l in links:
     print(l.text) """
 
 #get_attribute to fetch attribute value
-""" from selenium.webdriver import Chrome,ChromeOptions
+from selenium.webdriver import Chrome,ChromeOptions
 from selenium.webdriver.common.by import By
 o = ChromeOptions()
 o.add_experimental_option("detach",True)
@@ -26,5 +26,5 @@ driver.get("https://www.google.com/")
 driver.maximize_window()
 driver.implicitly_wait(10)
 ele = driver.find_element(By.XPATH,"//a[@class='gb_A']")
-print(ele.get_attribute('aria-label')) # returns the value of aria-label attribute """
+print(ele.get_attribute('aria-label')) # returns the value of aria-label attribute
 

@@ -28,7 +28,7 @@ driver.find_element(By.XPATH,"//img[@alt='Beanies & Neck Warmers']").click()
 driver.close() """
 
 # Explicit wait
-""" from selenium.webdriver import Chrome,ChromeOptions
+from selenium.webdriver import Chrome,ChromeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC #alias name
@@ -42,5 +42,5 @@ driver.find_element(By.TAG_NAME,"button").click()
 wait = WebDriverWait(driver,20) #wait object
 t = wait.until(EC.visibility_of_element_located((By.XPATH,"//div[@id='finish']//h4"))) #expected conditions
 print(t.text)
-driver.close() """
+driver.close()
 
