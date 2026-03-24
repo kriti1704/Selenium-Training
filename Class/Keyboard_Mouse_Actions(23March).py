@@ -138,7 +138,7 @@ sleep(4)
 driver.close() """
 
 # move to element - to move the mouse cursor to a specific element, mainly for hover actions
-from time import sleep
+""" from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import Chrome,ChromeOptions 
 from selenium.webdriver.common.by import By
@@ -153,7 +153,7 @@ actions = ActionChains(driver)
 ele=driver.find_element(By.XPATH, "(//div[@class='a-section feed-carousel-viewport'])[3]//a//img[1]")
 actions.move_to_element(ele).perform()
 sleep(2)
-driver.close()
+driver.close() """
 
 # using click_and_hold() to click and hold an element
 """ from time import sleep
@@ -202,7 +202,7 @@ sleep(5)
 driver.close() """
 
 # tab/ window handling
-""" from time import sleep
+from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import Chrome,ChromeOptions 
 from selenium.webdriver.common.by import By
@@ -213,19 +213,19 @@ driver=Chrome(options=o)
 driver.get("https://www.google.com/")
 driver.maximize_window()
 sleep(5)
-# manually 3 or 4 tabs
 # fetch the IDs of all tabs
-print("before current window handle: ",driver.current_window_handle)
-print("before driver title:",driver.title)
+print("first current window handle: ",driver.current_window_handle)
+print("first driver title:",driver.title)
 # opening new tabs
 sleep(5)
 driver.switch_to.new_window()
 driver.get("https://www.amazon.in/")
-print("after driver title:",driver.title)
-print("after current window handle: ",driver.current_window_handle)
+sleep(2)
+print("second current window handle: ",driver.current_window_handle)
+print("second driver title:",driver.title)
 print(driver.window_handles)
 sleep(5)
-# switch the tabs
+# switch to the first tab
 driver.switch_to.window(driver.window_handles[0])
 sleep(5)
-driver.close()"""
+driver.close()

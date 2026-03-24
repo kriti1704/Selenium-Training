@@ -20,41 +20,50 @@ driver.get("https://www.flipkart.com/")
 driver.maximize_window()
 sleep(5)
 driver.find_element(By.XPATH,"//span[@role='button']").click()
+# open myntra
 ele1=driver.find_element(By.XPATH, "//a[text()='Myntra']")
 actions = ActionChains(driver)
 actions.scroll_to_element(ele1).perform()
 actions.click(ele1).perform()
 sleep(5)
+
+# open cleartrip
 driver.switch_to.window(driver.window_handles[0])
 ele2=driver.find_element(By.XPATH, "//a[text()='Cleartrip']")
 actions.scroll_to_element(ele2).perform()
 actions.click(ele2).perform()
 sleep(5)
+
+# open shopsy
 driver.switch_to.window(driver.window_handles[0])
 ele3=driver.find_element(By.XPATH, "//a[text()='Shopsy']")
 actions.scroll_to_element(ele3).perform()
 actions.click(ele3).perform()
 sleep(5)
-# driver.switch_to.window(driver.window_handles[0])
+
 driver.switch_to.window(driver.window_handles[0])
 # finding the IDs of all windows
 print("IDs of all windows are: ", driver.window_handles)
 
 # fetching the IDs, title and URL of each window by switching to each window
+
 # flipkart window
 print("ID of flipkart window is: ", driver.current_window_handle)
 print("Title of flipkart window is: ", driver.title)
 print("URL of flipkart window is: ", driver.current_url)
+
 # myntra window
 driver.switch_to.window(driver.window_handles[1])
 print("ID of myntra window is: ", driver.current_window_handle)
 print("Title of myntra window is: ", driver.title)
 print("URL of myntra window is: ", driver.current_url)
+
 # cleartrip window
 driver.switch_to.window(driver.window_handles[2])
 print("ID of cleartrip window is: ", driver.current_window_handle)
 print("Title of cleartrip window is: ", driver.title)
 print("URL of cleartrip window is: ", driver.current_url)
+
 # shopsy window
 driver.switch_to.window(driver.window_handles[3])
 print("ID of shopsy window is: ", driver.current_window_handle)
