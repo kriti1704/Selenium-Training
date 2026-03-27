@@ -60,10 +60,10 @@ driver.find_element(By.XPATH, "(//button[@class='btn btn-primary'])[3]").click()
 # storing the elements in variables
 double_click=driver.find_element(By.XPATH, "(//button[@class='btn btn-primary'])[1]")
 right_click=driver.find_element(By.XPATH, "(//button[@class='btn btn-primary'])[2]")
-single_click=driver.find_element(By.XPATH, "(//button[@class='btn btn-primary'])[3]")
+single_click=driver.find_element(By.XPATH, "(//button[@class='btn btn-primary'])[3]")"""
 # now using action chains to perform these actions
 
-# Step-1: create an object of ActionChains class
+"""# Step-1: create an object of ActionChains class
 actions = ActionChains(driver)
 # Step-2: performing the clicks
 sleep(2)
@@ -77,7 +77,7 @@ sleep(2)
 actions.perform()
 driver.close() """
 
-# Scroll Actions - means moving the webpage until a specific element becomes visible on the screen so Selenium can interact with it.
+# Scroll Actions - Scroll to element means moving the webpage until a specific element becomes visible on the screen so Selenium can interact with it.
 """ from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import Chrome,ChromeOptions 

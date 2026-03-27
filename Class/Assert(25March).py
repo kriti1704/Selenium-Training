@@ -85,5 +85,4 @@ timestamp = time.strftime("%d-%m-%Y--%H-%M-%S")
 ele.screenshot(f"{folder}/ss3({timestamp}).png") # screenshot of element
 driver.close() """
 
-#
 

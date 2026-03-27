@@ -17,11 +17,11 @@ o.add_experimental_option("detach",True) #to keep the browser open after executi
 driver = Chrome(options=o) #driver is the object holding Chrome browser
 
 #to open google.com
-driver.get("https://www.google.com/") #return type is None
+driver.get("https://www.google.com/") #return type is None"""
 
 # Browser window management methods
 
-#to maximize the browser window
+"""#to maximize the browser window
 driver.maximize_window() #return type is None
 #to minimize the browser window
 driver.minimize_window() #return type is None
@@ -38,11 +38,11 @@ driver=Chrome(options=o)
 driver.get("https://www.amazon.com/")
 driver.maximize_window()
 sleep(2)
-driver.minimize_window()
+driver.minimize_window()"""
 
 #Page information properties
 
-#to fetch the title of the page for validation
+"""#to fetch the title of the page for validation
 print(driver.title) #return type is string
 #to fetch the current url of the page
 print(driver.current_url) #return type is string
@@ -78,11 +78,11 @@ driver=Chrome(options=o)
 driver.get("https://www.amazon.com/")
 driver.maximize_window()
 sleep(4)
-driver.back()
+driver.back() #moves backward
 sleep(2)
-driver.forward()
+driver.forward() #moves forward
 sleep(2)
-driver.refresh()
+driver.refresh() #refreshes page
 sleep(2)
 driver.close()
 
