@@ -201,6 +201,30 @@ actions.drag_and_drop(drag,drop).perform()
 sleep(5)
 driver.close() """
 
+# interacting with sliders
+""" from time import sleep
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import Chrome,ChromeOptions 
+from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
+o=ChromeOptions()
+o.add_experimental_option("detach",True)
+driver=Chrome(options=o)
+driver.get("https://testautomationpractice.blogspot.com/")
+driver.maximize_window()
+driver.implicitly_wait(5)
+slider1 = driver.find_element(By.XPATH,"(//span[@class='ui-slider-handle ui-corner-all ui-state-default'])[1]")
+slider2 = driver.find_element(By.XPATH,"(//span[@class='ui-slider-handle ui-corner-all ui-state-default'])[2]")
+actions = ActionChains(driver)
+actions.scroll_to_element(slider1).perform()
+sleep(1)
+#actions.drag_and_drop_by_offset(slider,100,0).perform() # moving the slider to right by 100 pixels
+actions.drag_and_drop_by_offset(slider1,-75,0).perform() # moving the slider to left by 100 pixels
+sleep(1)
+actions.drag_and_drop_by_offset(slider2,100,0).perform() # moving the slider to right by 100 pixels
+sleep(1)
+driver.close() """
+
 # tab/ window handling
 from time import sleep
 from selenium.webdriver.common.keys import Keys
