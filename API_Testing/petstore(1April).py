@@ -72,9 +72,9 @@ assert response.status_code==200, "Status code is not 200, It is: "+str(response
 print("status code is 200") """
 
 # fetch delete request for pet
-""" response = requests.delete("https://petstore.swagger.io/v2/pet/1002")
+response = requests.delete("https://petstore.swagger.io/v2/pet/1002")
 print(response.text)
 assert response.status_code==200, "Status code is not 200, It is: "+str(response.status_code)
-print("status code is 200") """
+print("status code is 200")
 
 

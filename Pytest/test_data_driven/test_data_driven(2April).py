@@ -1,5 +1,4 @@
 import openpyxl
-import pytest
 
 def get_test_data():
     # loading workbook
