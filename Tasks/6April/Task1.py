@@ -24,10 +24,9 @@ def register():
     print(response.text)    
     # checking the status code
     assert response.status_code==201, "Status code is not 201, It is: "+str(response.status_code)
-    print("User Registered with status code 201")
-    return response.json()['data']['userId'] # returning the userId 
+    print("User Registered with status code 201") 
 
-userId = register()
+register()
 
 # post request to login
 def login():
@@ -43,9 +42,13 @@ def login():
     # checking the status code
     assert response.status_code==200, "Status code is not 200, It is: "+str(response.status_code)
     print("User logged in with status code 200")
-    return response.json()['data']['jwtToken'] # returning the jwtToken
+    # returning user id and token
+    return (response.json()['data']['userId'],response.json()['data']['jwtToken']) 
 
-Token = login()
+data = login()
+
+userId = data[0]
+Token = data[1]
 
 #setting up the bearer token for authorization
 headers = {
@@ -54,9 +57,12 @@ headers = {
 
 # get request to fetch user
 # making the request
-response = requests.get("https://www.shoppersstack.com/shoppers/userId",headers=headers,verify=False) 
-#printing the response
-print(response.text)
-# checking status code
-assert response.status_code==200, "Status code is not 200, It is: "+str(response.status_code)
-print("User fetched with status code 200")
+def fetch_user():
+    response = requests.get("https://www.shoppersstack.com/shoppers/userId",headers=headers,verify=False) 
+    #printing the response
+    print(response.text)
+    # checking status code
+    assert response.status_code==200, "Status code is not 200, It is: "+str(response.status_code)
+    print("User fetched with status code 200")
+
+fetch_user()
