@@ -1,0 +1,48 @@
+{
+    "register_valid_user":{
+        "city": "Jaipur",
+        "country": "India",
+        "email": "naman123@gmail.com",
+        "firstName": "Naman",
+        "gender": "MALE",
+        "lastName": "Sharma",
+        "password": "1234",
+        "phone": "9999999999",
+        "state": "Rajasthan",
+        "zoneId": "ALPHA"
+    },
+    "register_invalid_user":{
+        "city": "Jaipur",
+        "country": "India",
+        "email": "naman_invalid@gmail.com",
+        "firstName": "Naman",
+        "gender": "MALE",
+        "lastName": "Sharma",
+        "password": "1234",
+        "phone": 123,
+        "state": "Rajasthan",
+        "zoneId": "ALPHA"
+    },
+    "login_valid_user":{
+        "email": "naman123@gmail.com",
+        "password": "1234",
+        "role": "SHOPPER"
+    },
+    "login_invalid_user":{
+        "email": "naman@gmail.com",
+        "password": "1234",
+        "role": "SHOPPER"
+    },
+    "update_user":{
+        "city": "Kishangarh",
+        "country": "India",
+        "email": "naman123@gmail.com",
+        "firstName": "Naman",
+        "gender": "MALE",
+        "lastName": "Sharma",
+        "password": "1234",
+        "phone": "9999999999",
+        "state": "Rajasthan",
+        "zoneId": "ALPHA"
+    }  
+}

@@ -1,0 +1,10 @@
+{
+    "add_cart": {
+        "productId": 102,
+        "quantity": 1
+    },
+    "update_cart": {
+        "productId": 102,
+        "quantity": 2
+    }
+}

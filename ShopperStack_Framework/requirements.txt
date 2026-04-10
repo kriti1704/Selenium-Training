@@ -1,0 +1,6 @@
+requests==2.32.3
+pytest==8.3.3
+pytest-html==4.1.1 # for reports
+python-dotenv==1.0.1 # for loading environment variables from .env file
+
+# pip install -r requirements.txt
